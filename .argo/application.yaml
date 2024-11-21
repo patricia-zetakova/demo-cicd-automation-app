@@ -4,12 +4,12 @@ metadata:
   name: cicd-automation-demo
   namespace: argocd
   annotations:
-    notifications.argoproj.io/subscribe.on-sync-succeeded.slack: deployments-notification
-    notifications.argoproj.io/subscribe.on-deployed.slack: deployments-notification
-    notifications.argoproj.io/subscribe.on-sync-failed.slack: deployments-notification
-    notifications.argoproj.io/subscribe.on-health-degraded.slack: deployments-notification
-    notifications.argoproj.io/subscribe.on-sync-status-unknown.slack: deployments-notification
-    notifications.argoproj.io/subscribe.on-sync-status-running.slack: deployments-notification
+    notifications.argoproj.io/subscribe.on-sync-succeeded.slack: 
+    notifications.argoproj.io/subscribe.on-deployed.slack: 
+    notifications.argoproj.io/subscribe.on-sync-failed.slack: 
+    notifications.argoproj.io/subscribe.on-health-degraded.slack: 
+    notifications.argoproj.io/subscribe.on-sync-status-unknown.slack: 
+    notifications.argoproj.io/subscribe.on-sync-status-running.slack: 
 spec:
   destination:
     namespace: default
@@ -17,7 +17,7 @@ spec:
   project: default
   source:
     path: chart
-    repoURL: https://github.com/majoferenc/demo-cicd-automation-app.git
+    repoURL: https://github.com/patricia-zetakova/demo-cicd-automation-app.git
     targetRevision: main
   syncPolicy:
     automated:
